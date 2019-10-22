@@ -1,0 +1,8 @@
+{
+  "home_page": "https://www.imsdb.com/all%20scripts/",
+  "xpath": {
+    "count_path": "/html/body[@id=\"mainbody\"]/table[2]/tr/td[3]/p",
+    "base_sub_url": "/html/body[@id=\"mainbody\"]/table[2]/tr/td[3]/p[x]/a",
+    ""
+  }
+}

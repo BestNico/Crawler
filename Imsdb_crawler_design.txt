@@ -1,0 +1,59 @@
+crawler design
+
+website = www.imsdb.com
+
+flow: homepage -> collect each subpage url  
+      requests.get subpage url to access each subpage
+
+
+structure
+
+settings.json
+    homepage url
+    each xpath
+    database connection message
+
+suburlsgenerator.py
+    generate the sub page URLs
+    Args:
+        main_url (str) : home page url
+    Return:
+        sub_URLs (list): List of sub page urls
+
+pageManagement.py
+    pageManagement
+        turn to next page if currently page is finished.
+
+Database.py
+    db management
+        connection
+        Insert, Delete,
+
+parser
+    script_details_parser.py
+        generate the part of details
+        Args:
+            url (str) : sub page url 
+        Return:
+            a dic of details
+
+    script_comments_parser.py
+        generate the part of comments
+        Args:
+            url (str) : sub page url
+        Return a dic of comments
+        
+    parser.py
+        parser management class -> generate details and comments , and then call db management to store these
+
+        Args:
+            url (str) 
+        Return 
+            Null
+    
+main.py
+    main class 
+
+
+
+
